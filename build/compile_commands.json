@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/dzz/OS_experiment/file_system/build",
+  "command": "/usr/bin/c++  -I/home/dzz/OS_experiment/file_system/include -g -o CMakeFiles/file_system.dir/main.cpp.o -c /home/dzz/OS_experiment/file_system/main.cpp",
+  "file": "/home/dzz/OS_experiment/file_system/main.cpp"
+}
+]
