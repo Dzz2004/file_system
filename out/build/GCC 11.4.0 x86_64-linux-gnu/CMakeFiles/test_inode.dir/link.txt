@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/test_inode.dir/test/test_inode.cpp.o CMakeFiles/test_inode.dir/src/disk.cpp.o CMakeFiles/test_inode.dir/src/inode.cpp.o -o test_inode 

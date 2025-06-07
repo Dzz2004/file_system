@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/test_fs.dir/test/test_fs.cpp.o CMakeFiles/test_fs.dir/src/fs.cpp.o CMakeFiles/test_fs.dir/src/inode_manager.cpp.o CMakeFiles/test_fs.dir/src/disk.cpp.o CMakeFiles/test_fs.dir/src/inode.cpp.o CMakeFiles/test_fs.dir/src/directory.cpp.o -o test_fs 
