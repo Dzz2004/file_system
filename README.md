@@ -1,7 +1,8 @@
 # 简易虚拟文件系统（Simple Virtual File System）
 
-本项目实现了一个基于虚拟磁盘的简单单用户文件系统模拟器，支持基本的文件与目录操作、持久化存储，以及命令行交互操作。
+> **本项目实现了一个基于虚拟磁盘的简单单用户文件系统模拟器，支持基本的文件与目录操作、持久化存储，以及命令行交互操作。**
 
+---
 ## 功能特性
 
 * 使用虚拟磁盘按块管理存储（1MB 总容量，1024 个块）
@@ -11,33 +12,53 @@
 * 目录操作：创建目录、删除空目录、切换目录、列出目录、显示当前路径
 * 持久化支持：可保存并加载完整磁盘数据及文件系统元信息
 * 命令行交互界面，操作直观易用
-
+---
 ## 项目结构
 
 ```
 .
-├── main.cpp                   // 程序主入口
-├── diskmanager.{h,cpp}        // 虚拟磁盘块管理模块
-├── inode.{h,cpp}              // inode 结构定义与文件数据读写
-├── inodemanager.{h,cpp}       // inode 分配与释放管理
-├── directory.{h,cpp}          // 目录树结构实现
-├── filesystem_context.{h,cpp} // 文件系统核心逻辑接口
-├── fileop.{h,cpp}             // 命令行命令解析与执行
-├── vdisk_final.dat            // 虚拟磁盘二进制文件
-├── vdisk_final.dat.meta       // 文件系统 inode 表与目录结构的元数据
-```
+├── include/                     # 头文件目录
+│   ├── directory.h
+│   ├── disk.h
+│   ├── fileop.h
+│   ├── fs.h
+│   ├── inode.h
+│   └── inode_manager.h
+│
+├── src/                         # 源代码目录
+│   ├── directory.cpp
+│   ├── disk.cpp
+│   ├── fileop.cpp
+│   ├── fs.cpp
+│   ├── inode.cpp
+│   ├── inode_manager.cpp
+│   └── main.cpp
+│
+├── test/                        # 单元测试目录
+│   ├── test_directory.cpp
+│   ├── test_disk.cpp
+│   ├── test_fs.cpp
+│   └── test_inode.cpp
+│
+├── CMakeLists.txt               # CMake 构建脚本（如有）
+└── README.md                    # 项目说明文档
 
+```
+---
 ## 编译与运行（环境：WSL Ubuntu 22.04, g++ 11.4）
 
-确保所有 `.cpp` 文件位于同一目录下，然后执行：
-
+在开始之前，请确保您的系统已安装支持 C++17 标准的编译器（例如 g++ 11.4）并处于 Linux 环境下（本项目已在 WSL Ubuntu 22.04 + g++ 11.4 环境测试通过）。以下是项目的安装和运行步骤：
+1. **获取代码**： 将代码克隆到本地。
 ```bash
-g++ -std=c++17 -o fs main.cpp \
-    diskmanager.cpp inode.cpp inodemanager.cpp \
-    directory.cpp filesystem_context.cpp fileop.cpp
-
-./fs
+git clone https://github.com/Dzz2004/file_system.git
 ```
+2. 使用cmake进行项目构建，项目以提供```cmakelists.txt```文件为基础。这里不再给出具体代码，可以使用cmake命令行或vscode的CMake工具进行构建。
+3. 可执行文件将生成在 `build` 目录下，构建目标target为file_system。
+```bash
+./build/file_system
+```
+
+---
 
 ## 支持的命令
 
