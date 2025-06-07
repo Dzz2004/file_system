@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/file_system.dir/src/main.cpp.o CMakeFiles/file_system.dir/src/disk.cpp.o CMakeFiles/file_system.dir/src/inode.cpp.o CMakeFiles/file_system.dir/src/directory.cpp.o CMakeFiles/file_system.dir/src/inode_manager.cpp.o CMakeFiles/file_system.dir/src/fs.cpp.o CMakeFiles/file_system.dir/src/fileop.cpp.o -o file_system 
