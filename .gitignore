@@ -1,0 +1,20 @@
+# Ignore build artifacts and temporary files
+out/
+build/
+builds/
+*.o
+*.out
+*.exe
+*.log
+*.swp
+
+# VSCode workspace settings (optional to ignore)
+.vscode/
+
+# Disk save files (generated at runtime)
+vdisk*.dat
+vdisk*.dat.meta
+
+# OS-specific files
+.DS_Store
+Thumbs.db
